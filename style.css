@@ -17,37 +17,39 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-image: url(Photos/close-up-mercury.png);
+  background-image: url(/Photos/close-up-mercury.png);
   color: black;
   width: 100%;
   height: 56px;
   text-decoration: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   align-items: center;
   list-style-type: none;
 }
 .nav-logo {
-  display: grid;
-  grid-column: 0/1;
-  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
   border: none;
   background-color: rgb(149, 149, 149);
   border-radius: 6px;
   padding: 1rem 2rem;
 }
 .nav-items {
-  display: grid;
-  grid-column: 3 / 4;
-  grid-row: 1;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  border: none;
+  background-color: rgb(149, 149, 149);
+  border-radius: 6px;
   padding: 1rem 2rem;
-  gap: 2rem;
+  margin: 2rem;
 }
 .navbar li a {
   text-decoration: none;
 }
 .nav-items a:hover {
-  background-color: rgb(49, 45, 45);
+  background-color: rgb(105, 103, 103);
 }
 /* navbar section links styles */
 html {
