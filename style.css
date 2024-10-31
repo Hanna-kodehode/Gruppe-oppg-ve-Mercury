@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
+  /* width: 100vw; */
 }
 :root {
   --main-bg-colour: black;
@@ -15,7 +15,7 @@ body {
 /* navbar styles */
 .navbar {
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 1000;
   color: var(--main-bg-colour);
   width: 100%;
@@ -30,29 +30,50 @@ body {
   align-items: center;
   justify-content: left;
   border: none;
-  padding: 1rem 2rem;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.193);
   color: rgb(177, 177, 177);
+  font-size: 32px;
+  font-weight: bolder;
+  margin-right: 5rem;
 }
 .nav-items {
   display: flex;
-  justify-content: right;
+  justify-content: space-evenly;
   flex-direction: row;
-  border: none;
-  padding: 1rem 2rem;
-  gap: 10px;
+  gap: 40px;
   list-style: none;
   color: rgb(177, 177, 177);
 }
 .navbar li a {
+  border: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
   text-decoration: none;
   color: rgb(177, 177, 177);
   gap: 10px;
+  font-size: medium;
 }
-.nav-items:hover {
+#home-btn:hover {
   border: none;
-  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
   background-color: rgb(19, 94, 179);
 }
+#about-btn:hover {
+  border: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  background-color: rgb(19, 94, 179);
+}
+#gallery-btn:hover {
+  border: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  background-color: rgb(19, 94, 179);
+}
+
 /* navbar section links styles */
 html {
   scroll-behavior: smooth;
@@ -60,7 +81,7 @@ html {
 /* hero styles */
 .hero {
   background-image: url(Photos/HeroHeader.jpg);
-  background-position: top;
+  background-position: top center;
   background-size: cover;
   position: relative;
   display: flex;
@@ -92,6 +113,9 @@ html {
   flex-direction: column;
   height: 100vh;
   color: white;
+  background-image: url(Photos/halfmercury.png.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .about img {
   display: flex;
@@ -109,3 +133,18 @@ html {
   width: 80%;
   line-height: normal;
 }
+/*more about section*/
+
+.more-about {
+  background-color: #111010;
+}
+
+/* Gallery section*/
+
+.gallery {
+  background-image: url(Photos/HeroHeader.jpg);
+  background-position: bottom center;
+  background-size: cover;
+}
+
+/*Footer*/
