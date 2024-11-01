@@ -6,6 +6,7 @@
 }
 :root {
   --main-bg-colour: black;
+  --main-font-colour: white;
 }
 header {
   position: sticky;
@@ -18,78 +19,67 @@ body {
   background-image: url(Photos/HeroHeader.jpg);
   background-size: cover;
 }
+
 /* navbar styles */
+
 .navbar {
   display: flex;
   flex-direction: row;
   gap: 10%;
-  width: 100vw;
+  width: 100%;
 }
 .nav-logo {
   display: flex;
   justify-content: left;
   align-self: center;
-  color: rgb(255, 255, 255);
+  color: var(--main-font-colour);
   border: none;
   background-color: rgba(128, 128, 128, 0.329);
   padding: 1rem 2rem;
-  border-radius: 6px;
+  border-radius: 0px 0px 6px 0px;
 }
 .nav-items {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin: 0 10px;
+  /* padding: 0 10px; */
   list-style: none;
   align-items: center;
   justify-content: right;
   border: none;
   transition: background-color 0.5s;
 }
-.nav-items a {
-  text-decoration: none;
-  color: white;
-  border-radius: 5px;
-  border: none;
-}
+
 /* buttons styles */
+
+.nav-items li {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 10px;
+}
 .nav-items li a {
-  border: none;
+  text-decoration: none;
+}
+.nav-items li a h2 {
   padding: 0.5rem 1rem;
   border-radius: 12px;
+  color: var(--main-font-colour);
+  border-radius: 5px;
 }
-/* #home-btn {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-}
-#about-btn {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-}
-#formation-btn {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-}
-#gallery-btn {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 12px; 
-}*/
+
 /* Action styles */
-.nav-items li a:hover,
-#about-btn:hover {
+.nav-items li a h2:hover {
   background-color: rgb(79, 151, 193);
 }
+
 /* navbar section links styles */
 html {
   scroll-behavior: smooth;
 }
+
 /* hero styles */
+
 .hero {
-  /* background-image: url(Photos/HeroHeader.jpg); */
   position: absolute;
   top: 0px;
   background-position: center;
@@ -101,7 +91,7 @@ html {
   justify-content: center;
   width: 95vw;
   height: 80vh;
-  color: white;
+  color: var(--main-font-colour);
   margin-top: 120px;
 }
 .hero-text {
@@ -116,38 +106,41 @@ html {
 }
 
 /* about section styles */
+
 .about {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   flex-direction: row;
   height: 125vh;
-  color: white;
+  color: var(--main-font-colour);
   background-image: url(Photos/halfmercury.png.jpg);
   background-size: cover;
   background-position: center;
 }
-
 .about-text {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  width: 80%;
+  flex-direction: column;
+  align-items: right;
+  width: 50%;
   line-height: normal;
+  padding: 10px;
+}
+
+.about-text h1 {
+  text-align: left;
 }
 
 /* Formation section styles */
+
 .formation {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   padding: 50px;
-  color: white;
-  background-color: #111010;
+  color: var(--main-font-colour);
+  background-color: var(--main-bg-colour);
   height: 125vh;
 }
 
@@ -155,6 +148,7 @@ html {
   padding-top: 10px;
   padding-left: 20px;
   margin-right: 35px;
+  padding: 10px;
 }
 
 .formation img {
@@ -166,7 +160,7 @@ html {
   padding-left: 20px;
 }
 
-/*gallery*/
+/*gallery styles*/
 
 .gallery {
   background-image: url(Photos/HeroHeader.jpg);
@@ -192,7 +186,8 @@ html {
 }
 
 #polaroid {
-  width: 300px;
+  /* width: 300px; */
+  width: 20vw;
   height: auto;
   box-shadow: 5px 5px 15px #11101061;
 }
@@ -200,7 +195,8 @@ html {
 #center {
   padding-top: 18%;
   padding-right: 7%;
-  width: 280px;
+  /*width: 280px;*/
+  width: 15wv;
   height: auto;
 }
 
@@ -218,11 +214,11 @@ html {
 .footer {
   height: 150px;
   max-height: 30vh;
-  background-color: #111010;
+  background-color: var(--main-bg-colour);
 }
 
 .footer p {
-  color: white;
+  color: var(--main-font-colour);
   text-align: center;
   padding: 20px;
 }
